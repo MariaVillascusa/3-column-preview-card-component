@@ -6,7 +6,7 @@
 
 body {
   font-size: 15px;
-  
+
   color: hsla(0, 0%, 100%, 0.75);
 }
 
@@ -57,10 +57,19 @@ p {
 }
 
 button {
+  border: 2.5px solid hsl(0, 0%, 95%);
   margin-top: 1.5em;
-  padding: 0.8em 1.5em;
-  border-radius: 20px;
-  border: none;
+  padding: 0.8em 1.7em;
+  border-radius: 25px;
+  transition: background .3s;
+
+}
+
+button:hover {
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .sedans__btn {
@@ -76,11 +85,56 @@ button {
 }
 
 .attribution {
-    display:none;
-  font-size: 11px;
-  color: hsl(179, 100%, 13%);
+  display: none;
 }
-.attribution a {
-  color: hsl(184, 100%, 22%);
-  text-decoration: none;
+
+@media screen and (min-width: 1150px) {
+  .container {
+    height: 98vh;
+  }
+
+  .card {
+    display: flex;
+    max-width: 1300px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 3em;
+    width: 210px;
+    height: 410px;
+    margin: 0;
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+
+  button {
+    margin-top: 7em;
+    padding: 1em 2.2em;
+  }
+
+  .attribution {
+    display: block;
+    font-size: 11px;
+    color: hsl(179, 100%, 13%);
+  }
+
+  .attribution a {
+    color: hsl(184, 100%, 22%);
+    text-decoration: none;
+  }
 }
